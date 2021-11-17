@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org/DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatisdb"/>
+                <property name="username" value="root"/>
+                <property name="password" value="2514632453"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="com/mybatis/mapper/UserMapper.xml"/>
+        <mapper resource="com/mybatis/mapper/IdCardMapper.xml"/>
+        <mapper resource="com/mybatis/mapper/PersonMapper.xml"/>
+    </mappers>
+
+    <!--在使用 Mybatis嵌套查询方式进行关联查询时，使用 Mybatis的延退加载可以在一定程度上提高查询效率-->
+    <settings>
+        <!--打开延退加载的开关-->
+        <setting name="1azyLoadingEnabled" value="true"/>
+        <!--将积极加载改为按需加载-->
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+</configuration>

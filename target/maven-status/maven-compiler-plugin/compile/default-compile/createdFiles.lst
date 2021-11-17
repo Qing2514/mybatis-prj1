@@ -1,0 +1,9 @@
+com\dao\PersonDao.class
+com\dao\IdCardDao.class
+com\mybatis\po\Person.class
+com\pojo\SelectUserParam.class
+com\mybatis\po\MyUser.class
+com\mybatis\test\TestOneToOne.class
+com\mybatis\po\Idcard.class
+com\pojo\SelectPersonById.class
+com\pojo\MapUser.class
